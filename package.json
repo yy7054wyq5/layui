@@ -1,7 +1,7 @@
 {
   "name": "layui-pkg",
   "version": "2.0.2",
-  "description": "经典模块化前端框架",
+  "description": "fork包",
   "main": "layui.js",
   "license": "MIT",
   "scripts": {
