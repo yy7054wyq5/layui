@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/sentsin/layui.git"
+    "url": "git@github.com:yy7054wyq5/layui-pkg.git"
   },
   "author": "贤心",
   "homepage": "http://www.layui.com",
