@@ -57,11 +57,27 @@ module.exports = function (config) {
 
 
         // list of files / patterns to load in the browser
-        files: sourceFileMap.concat('test/**/*.js'),
+        files: sourceFileMap.concat('test/**/*.js').concat({
+            pattern: 'src/css/**/*',
+            included: false
+        }, {
+            pattern: 'src/font/**/*',
+            included: false
+        }, {
+            pattern: 'src/images/**/*',
+            included: false
+        }),
 
 
         // list of files to exclude
         exclude: [],
+
+        client: {
+            mocha: {
+                // mocha测试超时6秒
+                timeout: 1000 * 6
+            }
+        },
 
 
         // preprocess matching files before serving them to the browser

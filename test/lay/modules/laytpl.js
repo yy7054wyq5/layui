@@ -4,6 +4,7 @@
  */
 
 /* global layui */
+/* eslint-disable max-nested-callbacks, fecs-indent */
 
 var laytpl = layui.laytpl;
 
@@ -213,7 +214,8 @@ describe('laytpl', function () {
     it('error var', function () {
       var result = laytpl('{{ data.xxoo }}').render({});
 
-      expect(result).to.have.string('Can\'t find variable: data');
+      expect(result).to.have.string('data');
+      expect(result).to.have.string('ReferenceError');
       expect(result).to.have.string('Laytpl Error');
     });
 
@@ -221,7 +223,8 @@ describe('laytpl', function () {
       var result = laytpl('{{# var xxoo = ; }}').render({});
 
       expect(result).to.have.string('Laytpl Error');
-      expect(result).to.have.string('Unexpected token \';\'');
+      expect(result).to.have.string('SyntaxError');
     });
   });
 });
+/* eslint-enable max-nested-callbacks, fecs-indent */
