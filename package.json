@@ -1,6 +1,6 @@
 {
   "name": "layui-pkg",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "fork pkg",
   "main": "layui.js",
   "license": "MIT",
@@ -45,6 +45,7 @@
   },
   "directories": {
     "doc": "doc",
+    "example": "examples",
     "test": "test"
   },
   "dependencies": {},
